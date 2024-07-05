@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="download_div">
+      <form action="{{ url_for('home') }}" method="POST" enctype="multipart/form-data">
+          {{ form.csrf_token }}
+          {{ form.file }}
+          {{ form.filename.label }}
+          {{ form.filename }}
+          {{ form.submit }}
+      </form>
+    </div>
+</body>
+</html>
